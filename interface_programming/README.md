@@ -6,21 +6,27 @@ Neste artigo, abordarei algumas técnicas básicas e pontos-chave dos padrões d
 que tornarão mais fácil para você dominar a programação Go.
 
 Hoje iremos conversar sobre o Parttener Interface Programming usando *Golang*.
-Mostramos dois exemplos simples que imprimem os dados da struct Person.
-No primeiro exemplo usamos uma função e no segundo usamos  "Member Function" *PrintPerson()*
+A seguir Mostramos dois exemplos simples que imprimem os dados da struct Person.
+No primeiro exemplo usamos uma função e no segundo usamos "Member Function" *PrintPerson()*
 
 ```go
 
-//Print - Function that prints data as Person structure
+type Person struct {
+    Name string
+    Sex  string
+    Age  int
+}
+
+//Print - Member function ( Receiver ) that prints data as Person structure
 func (p *Person) Print() {
-fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
+    fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
     p.Name, p.Sex, p.Age)
 }
 
-//PrintPerson - Member function ( Receiver ) that prints data as Person structure
+//PrintPerson - Function that prints data as Person structure
 func PrintPerson(p *Person) {
     fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
-p.Name, p.Sex, p.Age)
+    p.Name, p.Sex, p.Age)
 }
 
 func main() {
@@ -28,13 +34,13 @@ func main() {
     Name: "Rafael Oliveira",
     Sex:  "Male",
     Age:  35,
-}
+    }
 
     PrintPerson(&p)
     p.Print()
 }
 ```
-Qual maneira você prefere? Na linguagem *Go* a maneira de usar a "Member function" é chamada de "Receiver" pois originalmente é *Person* ficando fortemente acoplado.
+Qual maneira prefere? Na linguagem *Go* a maneira de usar a "Member function" é chamada "Receiver", pois originalmente é *Person* ficando fortemente acoplado.
 O Mais importante neste tipo de método podemos realizar a Interface Programming permitindo a abstração usada principalmente em "polimorfismo".
 Aqui quero conversar sobre Interface Programming em Go.
 Primeiro, vamos dar uma olhada no seguinte código:

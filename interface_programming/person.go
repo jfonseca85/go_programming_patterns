@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//Person - Structure that encapsulates the Person name, sex and age
 type Person struct {
 	Name string
 	Sex  string
