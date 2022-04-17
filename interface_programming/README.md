@@ -7,7 +7,7 @@ que tornarão mais fácil para você dominar a programação Go.
 
 Hoje iremos conversar sobre o Parttener Interface Programming usando *Golang*.
 A seguir Mostramos dois exemplos simples que imprimem os dados da struct Person.
-No primeiro exemplo usamos uma função e no segundo usamos "Member Function" *PrintPerson()*
+No primeiro exemplo usamos uma função e no segundo usamos "Member Function" *Print()*
 
 ```go
 
@@ -17,14 +17,14 @@ type Person struct {
     Age  int
 }
 
-//Print - Member function ( Receiver ) that prints data as Person structure
-func (p *Person) Print() {
-    fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
-    p.Name, p.Sex, p.Age)
-}
-
 //PrintPerson - Function that prints data as Person structure
 func PrintPerson(p *Person) {
+fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
+p.Name, p.Sex, p.Age)
+}
+
+//Print - Member function ( Receiver ) that prints data as Person structure
+func (p *Person) Print() {
     fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
     p.Name, p.Sex, p.Age)
 }
