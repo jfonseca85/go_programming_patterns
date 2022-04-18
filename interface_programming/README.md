@@ -176,3 +176,46 @@ Existem muitos exemplos desse padrão de programação na biblioteca padrão do 
 onde io.Read é uma interface, e você precisa implementar um de seus Read(p []byte) (n int, err error) métodos de interface.
 Desde que atenda a essa escala, ele pode ser usado por ioutil.ReadAll este método.
 Esta é a regra de ouro da programação orientada a objetos - "Programe para uma interface, não para uma implementação".
+
+## Interface Integrity Check
+
+Além disso, podemos ver que o programador da linguagem Go não verifica rigorosamente se um objeto implementa todos 
+os métodos de uma interface, conforme mostra o exemplo a seguir:
+
+```go
+//Shape - Shape - Interface to abstract the polygon type
+type Shape interface {
+    Sides() int
+    Area() int //Method not implemented
+}
+
+//Square - Structure that implements a Shape interface
+type Square struct {
+    len int
+}
+//Slices - Get the number of sides of the square
+func (s* Square) Sides() int {
+    return 4
+}
+
+//main - function that runs our scenario
+func main() {
+    s := Square{len: 5}
+    fmt.Printf("%d\n",s.Sides())
+}
+```
+
+Podemos ver que todos os métodos da interfaceSquare não estão implementados . 
+Embora o programa possa rodar, a forma de programação não é rigorosa. Se precisarmos aplicar todos os métodos da interface *Shape*,
+o que devemos fazer?
+
+Existe uma prática padrão no círculo de programação da linguagem Go:
+
+````go
+var _ Shape = (*Square)(nil)
+````
+
+Declare uma _variável (ninguém a usa), que converterá um nil (ponteiro nulo)  de Square para em Shape, de modo que,
+se o método de interface relevante não for implementado, o compilador informará um erro:
+
+>cannot use (*Square)(nil) (type *Square) as type Shape in assignment: *Square does not implement Shape (missing Area method)
