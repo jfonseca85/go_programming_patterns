@@ -17,7 +17,6 @@ se você souber de mais maneiras de escrever, por favor me avise. Desde já, obr
 1) [Simple example](#simple-example)
 2) [An example related to HTTP](#an-example-related-to-http)
 3) [Pipeline with multiple decorators](#pipeline-with-multiple-decorators)
-4) [Generic decorator](#generic-decorator)
 
 ## Simple example
 
@@ -270,4 +269,4 @@ http.HandleFunc("/v4/hello", Handler(hello,
 
 Este código não seria mais fácil de ler? A função de pipeline também sai.
 
-## Generic decorator
+
