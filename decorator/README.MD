@@ -2,7 +2,7 @@
 
 ![decorator](decorator.png)
 
-Neste Post iremos conversar sobre o Pattern Decorator este partnnern pode facilmente montar algumas funções para outras funções,
+Neste Post iremos conversar sobre o Pattern Decorator este patenner pode facilmente montar algumas funções para outras funções,
 o que pode tornar seu código mais simples, e também pode fazer algumas "pequenas funções".
 O código é mais reutilizável, de modo que as funções no código podem ser montadas livremente como brinquedos Lego.
 
@@ -245,6 +245,29 @@ func main() {
 }
 ````
 
-
 ## Pipeline with multiple decorators
+Em uso, é necessário empilhar funções camada por camada, o que não parece ser muito bonito,
+se forem necessários mais decoradores, o código ficará mais feio. Bem, podemos refatorar um pouco.
+
+Ao refatorar, precisamos primeiro escrever uma função utilitária - para percorrer e chamar cada decorador:
+
+````go
+type HttpHandlerDecorator func(http.HandlerFunc) http.HandlerFunc
+
+func Handler(h http.HandlerFunc, decors ...HttpHandlerDecorator) http.HandlerFunc {
+    for i := range decors {
+        d := decors[len(decors)-1-i] // iterate in reverse
+        h = d(h)
+    }
+    return h
+}
+````
+Então, podemos usá-lo como abaixo.
+````go
+http.HandleFunc("/v4/hello", Handler(hello,
+                WithServerHeader, WithBasicAuth, WithDebugLog))
+````
+
+Este código não seria mais fácil de ler? A função de pipeline também sai.
+
 ## Generic decorator
