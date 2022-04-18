@@ -62,3 +62,16 @@ func NewTLSServerWithMaxConnAndTimeout(addr string, port int, maxconns int, time
 Como o Go não oferece suporte a funções sobrecarregadas, você precisa usar nomes de função diferentes para diferentes opções de configuração.
 
 ## Configure Object Schema
+
+A maneira mais comum de resolver esse problema é usar um objeto de configuração como este:
+
+````go
+type Config struct {
+    Protocol string
+    Timeout  time.Duration
+    Maxconns int
+    TLS      *tls.Config
+}
+````
+
+Nós movemos as opções não obrigatórias para uma estrutura, então o Serverobjeto se tornou:
