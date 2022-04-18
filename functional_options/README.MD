@@ -12,7 +12,7 @@ No entanto, antes de podermos discutir formalmente esse padrão, precisamos prim
 4) [Functional Options](#functional-options)
 5) [Reference documentation](#reference-documentation)
 
-## configuration options problem
+## Configuration options problem
 
 Durante a programação, muitas vezes precisaremos configurar um objeto (ou entidade de negócios).
 Por exemplo, a seguinte entidade comercial (observe que este é apenas um exemplo):
