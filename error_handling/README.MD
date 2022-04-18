@@ -143,7 +143,7 @@ if err := scanner.Err(); err != nil {
 }
 ````
 
-A partir do código acima, podemos ver que scannerao operar a E/S subjacente, não há case *if err !=nil* e há uma *scanner.Err()*
+A partir do código acima, podemos ver que scanner ao operar a E/S subjacente, não há case *if err !=nil* e há uma *scanner.Err()*
 verificação após sair do loop. Parece usar a estrutura do caminho. Para emulá-lo, podemos refatorar nosso código para ficar assim:
 
 Primeiro, defina uma struct e uma member function
