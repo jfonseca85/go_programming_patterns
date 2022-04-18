@@ -10,7 +10,7 @@ No entanto, antes de podermos discutir formalmente esse padrão, precisamos prim
 2) [Configure Object Schema](#configure-object-schema)
 3) [Builder mode](#builder-mode)
 4) [Functional Options](#functional-options)
-5) [Reference documentation]](#reference-documentation)
+5) [Reference documentation](#reference-documentation)
 
 ## configuration options problem
 
