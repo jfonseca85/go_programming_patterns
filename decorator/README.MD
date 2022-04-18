@@ -46,6 +46,125 @@ func main() {
 }
 ````
 
+Podemos ver que usamos uma função de ordem superior decorator().
+Ao chamar, primeiro passamos a função Hello(), e depois ela retorna uma função anônima.
+Essa função anônima não apenas executa seu próprio código, mas também chama a função passada Hello().
+
+Essa codificação é semelhante à do Python, mas, infelizmente, o Go não suporta sintático @decorator. Então, é um pouco feio na chamada.
+Claro, se você quiser tornar o código mais fácil de ler, você pode fazer isso:
+
+````go
+hello := decorator(Hello)
+hello("Hello")
+````
+Vejamos outro exemplo e calculemos o tempo de execução:
+
+````go
+package main
+
+import (
+  "fmt"
+  "reflect"
+  "runtime"
+  "time"
+)
+
+type SumFunc func(int64, int64) int64
+
+func getFunctionName(i interface{}) string {
+  return runtime.FuncForPC(reflect.ValueOf(i).Pointer()).Name()
+}
+
+func timedSumFunc(f SumFunc) SumFunc {
+  return func(start, end int64) int64 {
+
+    defer func(t time.Time) {
+      fmt.Printf("--- Time Elapsed (%s): %v ---\n", 
+          getFunctionName(f), time.Since(t))
+    }(time.Now())
+
+    return f(start, end)
+  }
+}
+
+func Sum1(start, end int64) int64 {
+  var sum int64
+  sum = 0
+  if start > end {
+    start, end = end, start
+  }
+  for i := start; i <= end; i++ {
+    sum += i
+  }
+  return sum
+}
+
+func Sum2(start, end int64) int64 {
+  if start > end {
+    start, end = end, start
+  }
+  return (end - start + 1) * (end + start) / 2
+}
+
+func main() {
+
+  sum1 := timedSumFunc(Sum1)
+  sum2 := timedSumFunc(Sum2)
+
+  fmt.Printf("%d, %d\n", sum1(-10000, 10000000), sum2(-10000, 10000000))
+}
+````
+Algumas coisas a serem observadas sobre o código acima:
+1) Existem duas funções Sum, a função Sum1() é simplesmente um loop e a função Sum2() usa a fórmula de dados.
+(Nota: início e fim podem ter números negativos)
+2) O código usa a máquina de reflexão da linguagem Go para obter o nome da função.
+3) A função de decorador é timedSumFunc()
+
+Saída após a execução:
+
+````shell
+$ go run time.sum.go
+--- Time Elapsed (main.Sum1): 3.557469ms ---
+--- Time Elapsed (main.Sum2): 291ns ---
+49999954995000, 49999954995000
+````
+
 ## An example related to HTTP
+
+Vejamos um exemplo relacionado de manipulação de solicitações HTTP.
+
+Vejamos primeiro o código de um servidor HTTP simples.
+
+````go
+package main
+
+import (
+    "fmt"
+    "log"
+    "net/http"
+    "strings"
+)
+
+func WithServerHeader(h http.HandlerFunc) http.HandlerFunc {
+    return func(w http.ResponseWriter, r *http.Request) {
+        log.Println("--->WithServerHeader()")
+        w.Header().Set("Server", "HelloServer v0.0.1")
+        h(w, r)
+    }
+}
+
+func hello(w http.ResponseWriter, r *http.Request) {
+    log.Printf("Recieved Request %s from %s\n", r.URL.Path, r.RemoteAddr)
+    fmt.Fprintf(w, "Hello, World! "+r.URL.Path)
+}
+
+func main() {
+    http.HandleFunc("/v1/hello", WithServerHeader(hello))
+    err := http.ListenAndServe(":8080", nil)
+    if err != nil {
+        log.Fatal("ListenAndServe: ", err)
+    }
+}
+````
 ## Pipeline with multiple decorators
 ## Generic decorator
