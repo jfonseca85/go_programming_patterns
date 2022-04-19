@@ -99,7 +99,9 @@ Mas em alguns casos, vários visitantes devem acessar diferentes partes de uma e
 a estrutura de dados é um pouco como um banco de dados, e cada visitante se tornará um pequeno aplicativo. kubectl nosso é o caso.
 
 ## k8s related background
+
 Em seguida, vamos dar uma olhada no histórico de conhecimento relevante:
+
 - Para Kubernetes, ele abstrai muitos tipos de Recurso, como: *Pod, ReplicaSet, ConfigMap, Volumes, Namespace, Roles.*
 Existem muitos tipos, essas coisas constituem o modelo de dado do Kubernetes (clique no [mapa Kubernetes Resources](https://github.com/kubernauts/practical-kubernetes-problems/blob/master/images/k8s-resources-map.png) para ver como é complicado)
 - **kubectl** - É um comando de cliente no Kubernetes, e o operador usa esse comando para operar o Kubernetes.
