@@ -30,7 +30,7 @@ Neste post mostramos fazer o [Download e instalação](install.md) do Go
 
 Começando bem simples, com o *Hello, World!"
 
-### Abra seu terminal favorito e crie uma pasta chamada *tutoriais-golang\hello-world*
+### Abra seu terminal favorito e crie uma pasta chamada **tutoriais-golang\hello-world**
 
 ````shell
 mkdir tutoriais-golang
