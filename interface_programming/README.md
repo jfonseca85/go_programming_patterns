@@ -5,7 +5,7 @@
 Neste artigo, abordarei algumas técnicas básicas e pontos-chave dos padrões de programação Go,
 que tornarão mais fácil para você dominar a programação Go.
 
-Hoje iremos conversar sobre o Parttener Interface Programming usando *Golang*.
+Hoje iremos conversar sobre o Parttern Interface Programming usando *Golang*.
 A seguir Mostramos dois exemplos simples que imprimem os dados da struct Person.
 No primeiro exemplo usamos uma função e no segundo usamos "Member Function" *Print()*
 
