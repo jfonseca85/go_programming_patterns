@@ -1,8 +1,9 @@
 # K8S Visitor Mode
 
 ![k8s_visitor_mode](k8s_visitor_mode.png)
+abordarei 
 
-Este artigo pretende discutir principalmente um padrão de programação usado nos comandos kubectl
+Neste artigo iremos abordar principalmente um padrão de programação usado nos comandos kubectl
 – *Visitor* (Nota: Na verdade, kubectl são principalmente usados dois, um é o Builder e o outro é o Visitor).
 Originalmente, o Visitor é um modelo de design muito importante no modelo de *design orientado a objetos* [consulte a entrada Wikipedia Visitor Pattern](https://en.wikipedia.org/wiki/Visitor_pattern),
 esse padrão é uma maneira de separar o algoritmo da estrutura do objeto operacional.
