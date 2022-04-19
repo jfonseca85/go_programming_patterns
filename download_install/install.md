@@ -1,6 +1,6 @@
 # Download and install
 
-<p align="center"><img src="assets/install-motorcycle.svg?raw=true" width="auto" height="150"></p>
+<p align="center"><img src="assets/images/install-motorcycle.svg?raw=true" width="600" height="480"></p>
 
 Neste tutorial iremos mostrar como instalar facilmente o Go.
 
@@ -17,7 +17,25 @@ Clique no botão seguir para fazer download do instalador.
 
 Caso você esteja executando num ambiente diferente do Windows. Experimente [outros downloads](https://go.dev/dl/) 
 
-> **Nota:** Por padrão, o comando go faz downloads e autentica usando Go module mirror e banco de dados Go checksum executados pelo Google. [Saiba main](https://go.dev/dl)
+> **Nota:** Por padrão, o comando go faz downloads e autentica usando Go module mirror e banco de dados Go checksum executados pelo Google. [Saiba mais](https://go.dev/dl)
 
 ## Go install
+
+### Windows
+
+1) Abra o arquivo MSI da pasta download e siga os passo a passo da instalação.
+> Por padrão, o instalador instala o Go na pasta *Program Files or Program Files (x86)*. Caso necessário você pode alterá-lo.
+Depois da instalação você precisa fechar e abrir o terminal para recarregae as variáveis de ambiente.
+
+2) Valide a instalação do Go
+   1) No **Windows**, clique no menu **Iniciar**
+   2) Na caixa de pesquisa, digite *cmd*, e pressione a tecla **Enter**
+   3) No Terminal de comando do windows, digite o seguinte comando
+   ````shell
+     $ go version
+    ````
+   4) O Comando imprime a versão do Go instalada na sua máquina
+
+## Vamos de código - Hello World
+
 
