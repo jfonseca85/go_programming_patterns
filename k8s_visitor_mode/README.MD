@@ -1,7 +1,6 @@
 # K8S Visitor Mode
 
-![k8s_visitor_mode](k8s_visitor_mode.png)
-abordarei 
+<p align="center"><img src="k8s_visitor_mode.png?raw=true" width="300" height="150"></p>
 
 Neste artigo iremos abordar principalmente um padrão de programação usado nos comandos kubectl
 – *Visitor* (Nota: Na verdade, kubectl são principalmente usados dois, um é o Builder e o outro é o Visitor).

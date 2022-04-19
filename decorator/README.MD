@@ -1,6 +1,6 @@
 # Pattern Decorator
 
-![decorator](decorator.png)
+<p align="center"><a href="#" target="_blank"><img src="decorator.png?raw=true" width="auto" height="150"></a></p>
 
 Neste Post iremos discutir sobre o **Pattern Decorator** este pattern pode facilmente montar algumas funções para outras funções,
 o que pode tornar seu código mais simples, e também pode fazer algumas "pequenas funções".

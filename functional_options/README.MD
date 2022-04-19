@@ -1,5 +1,6 @@
 # Pattner Functional Options
-![functional_options](functional_options.png)
+
+<p align="center"><img src="functional_options.png?raw=true" width="auto" height="150"></p>
 
 Neste artigo, vamos discutir o padrão de programação Functional Options. Este é um caso de aplicação de programação funcional,
 e as habilidades de programação também são ótimas, sendo atualmente o padrão de programação mais popular na linguagem Go.

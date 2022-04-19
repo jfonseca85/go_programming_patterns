@@ -1,6 +1,6 @@
 # Interface Programming
 
-![interface_programming](interface_programming.png)
+<p align="center"><img src="interface_programming.png?raw=true" width="300" height="150"></p>
 
 Neste artigo, abordarei algumas técnicas básicas e pontos-chave dos padrões de programação Go,
 que tornarão mais fácil para você dominar a programação Go.

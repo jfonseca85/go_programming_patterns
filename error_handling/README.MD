@@ -1,6 +1,6 @@
 # Error Handling in Go
 
-<p align="center"><a href="#" target="_blank"><img src="error-handling.png?raw=true" width="auto" height="150"></a></p>
+<p align="center"><img src="error-handling.png?raw=true" width="auto" height="150"></p>
 
 
 O tratamento de erros sempre foi um problema que a programação deve enfrentar, se o tratamento de erros for bem-feito, 
