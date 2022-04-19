@@ -78,7 +78,7 @@ func main () {
 ````
 ## Error Check  Hell
 
-Bem, quando se trata *if err !=nil* do , esse código pode realmente fazer as pessoas vomitarem.
+Bem, quando se trata do *if err !=nil*, esse código pode realmente fazer as pessoas vomitarem.
 Então, existe alguma boa maneira? Vamos primeiro olhar para o seguinte código de falha.
 
 ````go
