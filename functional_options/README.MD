@@ -7,7 +7,7 @@ e as habilidades de programação também são ótimas, sendo atualmente o padr�
 No entanto, antes de podermos discutir formalmente esse padrão, precisamos primeiro dar uma olhada no tipo de problema que está sendo resolvido.
 
 ## Content
-1) [configuration options problem](#configuration-options-problem)
+1) [Configuration options problem](#configuration-options-problem)
 2) [Configure Object Schema](#configure-object-schema)
 3) [Builder mode](#builder-mode)
 4) [Functional Options](#functional-options)
