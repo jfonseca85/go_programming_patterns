@@ -2,7 +2,7 @@
 
 ![decorator](decorator.png)
 
-Neste Post iremos conversar sobre o Pattern Decorator este patenner pode facilmente montar algumas funções para outras funções,
+Neste Post iremos discutir sobre o Pattern Decorator este pattenern pode facilmente montar algumas funções para outras funções,
 o que pode tornar seu código mais simples, e também pode fazer algumas "pequenas funções".
 O código é mais reutilizável, de modo que as funções no código podem ser montadas livremente como brinquedos Lego.
 
