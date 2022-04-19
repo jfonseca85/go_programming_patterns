@@ -36,6 +36,6 @@ Depois da instalação você precisa fechar e abrir o terminal para recarregae a
     ````
    4) O Comando imprime a versão do Go instalada na sua máquina
 
-## Vamos de código - Hello World
+## [Vamos de código - Hello World](./get_started_with_go.md#nosso-hello-world)
 
 
