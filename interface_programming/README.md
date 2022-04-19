@@ -19,8 +19,8 @@ type Person struct {
 
 //PrintPerson - Function that prints data as Person structure
 func PrintPerson(p *Person) {
-fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
-p.Name, p.Sex, p.Age)
+	fmt.Printf("Name=%s, Sex=%s, Age=%d\n",
+	p.Name, p.Sex, p.Age)
 }
 
 //Print - Member function ( Receiver ) that prints data as Person structure
@@ -31,9 +31,9 @@ func (p *Person) Print() {
 
 func main() {
     var p = Person{
-    Name: "Rafael Oliveira",
-    Sex:  "Male",
-    Age:  35,
+   	 Name: "Rafael Oliveira",
+   	 Sex:  "Male",
+   	 Age:  35,
     }
 
     PrintPerson(&p)
