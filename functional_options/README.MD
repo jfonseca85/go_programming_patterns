@@ -29,7 +29,7 @@ type Server struct {
 }
 ````
 
-Nesta strcut Server , podemos ver:
+Na struct *Server*, podemos ver:
 - Para ter um endereço IP de escuta *Addr* e número de porta *Port*, essas duas opções de configuração são necessárias
 (claro, o endereço IP e o número da porta podem ter valores padrão, quando o usamos como exemplo aqui,
 pensamos não haver valor padrão e não pode estar vazio, obrigatório).
