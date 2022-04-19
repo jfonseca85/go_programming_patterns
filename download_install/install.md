@@ -1,6 +1,6 @@
 # Download and install
 
-<p align="center"><img src="assets/install-motorcycle.svg?raw=true" width="auto" height="150"></p>
+<p align="center"><img src="assets/install-motorcycle.svg" width="auto" height="150"></p>
 
 Neste tutorial iremos mostrar como instalar facilmente o Go.
 
