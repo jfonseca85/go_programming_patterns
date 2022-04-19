@@ -4,7 +4,13 @@
 
 O tratamento de erros sempre foi um problema que a programação deve enfrentar, se o tratamento de erros for bem-feito, 
 a estabilidade do código será ótima. Diferentes linguagens possuem diferentes formas de lidar com ocorrências. 
-O mesmo vale para o Go e, neste artigo, vamos discutir onde o Go dá errado, especialmente os enlouquecedores if err != nil.
+O mesmo vale para o Go e, neste artigo, vamos discutir onde o Go dá errado, especialmente os enlouquecedores *if err != nil*.
+
+## Content
+1) [Resource cleanup](#resource-cleanup)
+2) [Error Check  Hell](#error-check--hell)
+3) [Packaging error](#packaging-error)
+4) [Reference article](#reference-article)
 
 As funções na linguagem Go suportam vários valores de retorno, portanto, a semântica de negócios (valores de retorno de negócios)
 e a semântica de controle (valores de retorno de erro) podem ser diferenciadas na ‘interface’ de retorno.
@@ -236,7 +242,7 @@ func main() {
 Acredito que deva entender essa técnica, mas seu cenário de uso só pode simplificar o tratamento de erros sob a 
 operação contínua do mesmo objeto de negócios. Para vários objetos de negócios, vários métodos ainda *if err != nil* são necessários.
 
-## packaging error
+## Packaging error
 
 Por fim, mais uma coisa, precisamos encapsular o erro, em vez de devolvê-lo à camada superior secamente err, precisamos adicionar algum contexto de execução.
 
