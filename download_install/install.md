@@ -1,10 +1,10 @@
 # Download and install
 
-<p align="center"><img src="assets/install-motorcycle.svg" width="auto" height="150"></p>
+<p align="center"><img src="assets/images/install-motorcycle.svg" width="auto" height="150"></p>
 
 Neste tutorial iremos mostrar como instalar facilmente o Go.
 
-Aqui você encontra outras forma de instalções.
+Aqui você encontra outras forma de instalações.
 
 - [Gerenciando as instalações Go](https://go.dev/doc/manage-install) -- Como instalar e desinstalar multiplas de versões.
 - [Instalando a partir do código fonte](https://go.dev/doc/install/source) -- Como fazer o build e instalar na sua máquina a partir do código fonte.
@@ -14,6 +14,8 @@ Aqui você encontra outras forma de instalções.
 Clique no botão seguir para fazer download do instalador.
 
 [Download Go for Windows](https://go.dev/dl/go1.18.1.windows-amd64.msi)
+[Download Go for macOS](https://go.dev/dl/go1.18.1.darwin-amd64.pkg)
+[Download Go for Linux](https://go.dev/dl/go1.18.1.linux-amd64.tar.gz)
 
 Caso você esteja executando num ambiente diferente do Windows. Experimente [outros downloads](https://go.dev/dl/) 
 
