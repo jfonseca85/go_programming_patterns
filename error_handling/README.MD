@@ -3,7 +3,7 @@
 <p align="center"><img src="error-handling.png?raw=true" width="auto" height="150"></p>
 
 
-O tratamento de erros sempre foi um problema que a programação deve enfrentar, se o tratamento de erros for bem-feito, 
+O tratamento de erros sempre foi um problema que a programação teve que enfrentar, se o tratamento de erros for bem-feito, 
 a estabilidade do código será ótima. Diferentes linguagens possuem diferentes formas de lidar com ocorrências. 
 O mesmo vale para o Go e, neste artigo, vamos discutir onde o Go dá errado, especialmente os enlouquecedores *if err != nil*.
 

@@ -7,7 +7,7 @@ e as habilidades de programação também são ótimas, sendo atualmente o padr�
 No entanto, antes de podermos discutir formalmente esse padrão, precisamos primeiro dar uma olhada no tipo de problema que está sendo resolvido.
 
 ## Content
-1) [configuration options problem](#configuration-options-problem)
+1) [Configuration options problem](#configuration-options-problem)
 2) [Configure Object Schema](#configure-object-schema)
 3) [Builder mode](#builder-mode)
 4) [Functional Options](#functional-options)
@@ -29,7 +29,7 @@ type Server struct {
 }
 ````
 
-Nesta strcut Server , podemos ver:
+Na struct *Server*, podemos ver:
 - Para ter um endereço IP de escuta *Addr* e número de porta *Port*, essas duas opções de configuração são necessárias
 (claro, o endereço IP e o número da porta podem ter valores padrão, quando o usamos como exemplo aqui,
 pensamos não haver valor padrão e não pode estar vazio, obrigatório).
