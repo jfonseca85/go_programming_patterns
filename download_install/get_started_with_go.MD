@@ -9,7 +9,7 @@
 
 Neste tutorial, iremos fazer uma inicialização para Programação em Go. Passando por estas etapas:
 
-- Instalação do Go ( Caso ainda não tenha feito)
+- Instalação do Go (Caso ainda não tenha feito)
 - Escrevendo um exemplo simples *"Hello, world!"*
 - Usando o comando go para executar nosso código
 
