@@ -1,4 +1,4 @@
-# Pattner Functional Options
+# Partner Functional Options
 
 <p align="center"><img src="functional_options.png?raw=true" width="auto" height="150"></p>
 
